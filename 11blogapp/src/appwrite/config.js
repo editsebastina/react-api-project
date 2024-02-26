@@ -1,4 +1,4 @@
-import { conf } from '../conf/conf.js';
+import conf from '../conf/conf';
 import { Client, Databases, Storage, Query, ID } from "appwrite";
 
 // This is the backend service that will be used to interact with the Appwrite API.
@@ -9,10 +9,12 @@ export class Service {
     bucket;
 
     constructor() {
-        this.setEndpoint(conf.appwriteUrl) // Your API Endpoint
-        .setProject(conf.appwriteProjectID) // Your project ID
+        this.client
+            .setEndpoint(conf.appwriteUrl) // Your API Endpoint
+            .setProject(conf.appwriteProjectID) // Your project ID
+
         this.databases = new Databases(this.client)
-        this.bucket = new Storage(client)
+        this.bucket = new Storage(this.client)
     }
 
     async getpost(slug) {  

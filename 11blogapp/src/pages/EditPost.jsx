@@ -1,7 +1,7 @@
 import React, {useEffect, useState }from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import appwriteService from '../appwrite/conf'
-import Container from '../components/Container'
+import appwriteService from '../appwrite/config'
+import Container from '../components/container/Container'
 import PostForm from '../components/post-form/PostForm'
 
 

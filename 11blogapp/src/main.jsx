@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import store from './store/store.js'
 
 import Protected from './components/AuthLayout.jsx'
-import SignUp from './pages/SignUp.jsx'
+import SignUpPage from './pages/SignUpPage.jsx'
 import Login from './pages/Login.jsx'
 import Home from './pages/Home.jsx'
 import AllPosts from './pages/AllPosts.jsx'
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       },
       { path: "/signup", element: 
         <Protected authentication={false}>
-          <SignUp /> 
+          <SignUpPage /> 
         </Protected>   
       },
       { path: "/all-posts", element: 
