@@ -105,7 +105,6 @@ export class Service {
         ).href
     }
 
-
 }
 
 const service = new Service();
